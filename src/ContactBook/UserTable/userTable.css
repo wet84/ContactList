@@ -1,0 +1,25 @@
+.user-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.user-table tr td {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-bottom: 2px dotted rgba(128, 128, 128, 0.5);
+}
+
+.user-table thead tr th {
+    text-align: left;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.delete-button {
+    background-color: #99a499;
+    color: white;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

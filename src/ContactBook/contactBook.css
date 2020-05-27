@@ -1,0 +1,20 @@
+.contact-book {
+    width: 800px;
+    margin: 10px auto;
+    border: 1px solid grey;
+    padding: 10px;
+    background-color: #edf6ed;
+}
+
+.contact-book h1 {
+    text-align: center;
+}
+
+.toggle-button {
+    background-color: #99a499;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
