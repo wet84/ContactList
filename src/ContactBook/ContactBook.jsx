@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import UserTable from './UserTable/UserTable'
-import UserForm from './Form/UserForm'
+import ContactTable from './ContactTable/ContactTable'
+import ContactForm from './ContactForm/ContactForm'
 import './contactBook.css';
 
 const MAIN_TITLE = "Contact Book";
@@ -41,9 +41,8 @@ export default class ContactBook extends Component {
         return (
             <div className="contact-book">
                 <h1>{MAIN_TITLE}</h1>
-                <UserTable contacts={this.state.usersList} deleteItem={this.deleteContact}/>
-                <UserForm toggle={this.state.toggleVisible} addNewContact={this.addNewContact}/>
-
+                <ContactTable contacts={this.state.usersList} deleteItem={this.deleteContact}/>
+                <ContactForm toggle={this.state.toggleVisible} addNewContact={this.addNewContact}/>
                 <button className="toggle-button" onClick={this.toggleVisibleForm}>{this.state.toggleVisible ? SHOW : HIDE }</button>
             </div>
         )

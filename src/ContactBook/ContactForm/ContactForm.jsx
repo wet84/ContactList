@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './userForm.css';
+import './contactForm.css';
 
 const TITLE_FORM = "Fill in all the fields on the form";
 
-export default class UserForm extends Component {
+export default class ContactForm extends Component {
     
     state = {
         name:'',

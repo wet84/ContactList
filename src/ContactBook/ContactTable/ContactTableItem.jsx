@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import OnDeleteItem from './OnDeleteItem';
 
-export default class UserTableItem extends Component {
-
-    renderBody () {
-        const { contacts, onDelete } = this.props;
-
-        const rows = contacts.map((contact) => 
+export default class ContactTableItem extends Component {
+    
+    render() {
+        const { contact, onDelete } = this.props;
+        
+        return (
             <tr key={contact.contactId}>
                 <td>{ contact.name }</td>
                 <td>{ contact.surname }</td>
@@ -15,16 +15,6 @@ export default class UserTableItem extends Component {
                     <OnDeleteItem deleteItem={onDelete} id={contact.contactId}/>
                 </td>
             </tr>
-        );
-
-        return (
-            <tbody>
-                { rows }
-            </tbody>
-        );
-    }
-    
-    render() {
-        return this.renderBody();
+        )
     }
 }

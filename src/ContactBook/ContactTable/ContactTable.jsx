@@ -1,13 +1,27 @@
 import React, { Component } from 'react'
-import "./userTable.css"
-import UserTableItem from './UserTableItem'
+import "./contactTable.css"
+import UserTableItem from './ContactTableItem'
 
 const TH_NAME = "Name";
 const TH_SURNAME = "SurName";
 const TH_TEL = "Mobile phone";
 
-export default class UserTable extends Component {
+export default class ContactTable extends Component {
     
+    renderBody () {
+        const { contacts } = this.props;
+
+        const rows = contacts.map((contact) => 
+            <UserTableItem contact={contact} onDelete={this.props.deleteItem}/>
+        );
+
+        return (
+            <tbody>
+                { rows }
+            </tbody>
+        );
+    }
+
     renderHeader () {
         return (
             <thead>
@@ -25,7 +39,7 @@ export default class UserTable extends Component {
         return (
             <table className="user-table">
                 { this.renderHeader() }
-                <UserTableItem contacts={this.props.contacts} onDelete={this.props.deleteItem}/>
+                { this.renderBody() }
             </table>
         )
     }
